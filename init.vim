@@ -119,19 +119,19 @@ xnoremap p pgvy
 :noremap , 5gk
 
 " [vim-plug]
-call plug#begin()
+" call plug#begin()
 " 像 vscode 一样的 cmd + d 多选
-Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+" Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 " ]m 跳到 def 而不是 {
-Plug 'jeetsukumaran/vim-pythonsense'
+" Plug 'jeetsukumaran/vim-pythonsense'
 " delete surrounded parentheses
 " Plug 'tpope/vim-surround' 
 " 彩色括号
 " Plug 'luochen1990/rainbow'
-let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
+" let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 " Plug 'wakatime/vim-wakatime'
-call plug#end()
+" call plug#end()
 
 " [添加 Packer]
-lua require('plugins')
+" lua require('plugins')
 
