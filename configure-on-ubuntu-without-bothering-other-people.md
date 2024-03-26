@@ -11,9 +11,13 @@ sudo apt-add-repository ppa:fish-shell/release-3
 sudo apt update
 sudo apt install fish
 # in GitHub folder
+mkdir -p ~/Documents/GitHub
+cd ~/Documents/GitHub
 git clone git@github.com:julyfun/mfa.fish
 git clone git@github.com:julyfun/personal-cfg
 git clone git@github.com:wting/autojump.git
+cd autojump
+./install.py
 ```
 
 ```
