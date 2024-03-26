@@ -21,7 +21,7 @@ vim ~/.config/fish/config.fish
 # add this:
 source ~/Documents/GitHub/mfa.fish/mfa.fish
 source ~/Documents/GitHub/mfa.fish/jst.fish
-source ~/Documents/GitHub/wting/autojump/bin/autojump.fish
+source ~/Documents/GitHub/autojump/bin/autojump.fish
 ```
 
 ## vscode neovim < neovim < PATH fish
