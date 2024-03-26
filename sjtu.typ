@@ -160,10 +160,6 @@ plt.xlabel('t')
 plt.ylabel('x(t)')
 plt.legend()
 plt.show()
-
 ```
-
 ]
-
-
 

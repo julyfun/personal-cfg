@@ -7,6 +7,8 @@ sudo apt install konsole
 ## auto completion, autojump < fish
 
 ```
+sudo apt-add-repository ppa:fish-shell/release-3
+sudo apt update
 sudo apt install fish
 # in GitHub folder
 git clone git@github.com:julyfun/mfa.fish
