@@ -13,10 +13,10 @@ sudo apt install fish
 # in GitHub folder
 mkdir -p ~/Documents/GitHub
 cd ~/Documents/GitHub
-git clone git@github.com:julyfun/mfa.fish
-git clone git@github.com:julyfun/kickstart.fish
-git clone git@github.com:julyfun/personal-cfg
-git clone git@github.com:wting/autojump.git
+git clone git@github.com:julyfun/mfa.fish --depth=10
+git clone git@github.com:julyfun/kickstart.fish --depth=10
+git clone git@github.com:julyfun/personal-cfg --depth=10
+git clone git@github.com:wting/autojump.git --depth=10
 cd autojump
 ./install.py
 ```

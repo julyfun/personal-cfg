@@ -5,10 +5,10 @@ sudo apt update
 sudo apt install fish
 mkdir -p ~/Documents/GitHub
 cd ~/Documents/GitHub
-git clone git@github.com:julyfun/mfa.fish
-git clone git@github.com:julyfun/kickstart.fish
-git clone git@github.com:julyfun/personal-cfg
-git clone git@github.com:wting/autojump.git
+git clone git@github.com:julyfun/mfa.fish --depth=10
+git clone git@github.com:julyfun/kickstart.fish --depth=10
+git clone git@github.com:julyfun/personal-cfg --depth=10
+git clone git@github.com:wting/autojump.git --depth=10
 cd autojump
 ./install.py
 
@@ -23,12 +23,15 @@ source ~/Documents/GitHub/autojump/bin/autojump.fish
 
 echo "$fish_source" >> ~/.config/fish/config.fish
 
-mkdir -p ~/.mfa/bin
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
-chmod u+x nvim.appimage
-mv nvim.appimage ~/.mfa/bin/nvim
+# mkdir -p ~/.mfa/bin
+# curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+# chmod u+x nvim.appimage
+# mv nvim.appimage ~/.mfa/bin/nvim
+# echo 'set PATH "$PATH:$HOME/.mfa/bin'
 
-echo 'set PATH "$PATH:$HOME/.mfa/bin'
+sudo add-apt-repository ppa:neovim-ppa/stable
+sudo apt-get update
+sudo apt-get install neovim
 
 mkdir ~/.config/nvim
 cd ~/.config/nvim
