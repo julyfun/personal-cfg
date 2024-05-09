@@ -14,6 +14,7 @@ sudo apt install fish
 mkdir -p ~/Documents/GitHub
 cd ~/Documents/GitHub
 git clone git@github.com:julyfun/mfa.fish
+git clone git@github.com:julyfun/kickstart.fish
 git clone git@github.com:julyfun/personal-cfg
 git clone git@github.com:wting/autojump.git
 cd autojump
@@ -25,6 +26,7 @@ vim ~/.config/fish/config.fish
 # add this:
 source ~/Documents/GitHub/mfa.fish/mfa.fish
 source ~/Documents/GitHub/mfa.fish/jst.fish
+source ~/Documents/GitHub/kickstart.fish/kickstart.fish
 source ~/Documents/GitHub/autojump/bin/autojump.fish
 ```
 
@@ -42,4 +44,11 @@ mkdir ~/.config/nvim
 cd ~/.config/nvim
 cp ~/Documents/GitHub/personal-cfg/init.vim .
 ```
+
+in vscode install neovim extension, in settings you search neovim path and add the FULL path to nvim in the parameter box 
+
+Shortcut settings: 
+
+View: Toggle Primary Side Bar Visibility > Add key bindings > ctrl + shift + B
+
 
