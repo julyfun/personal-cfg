@@ -1,4 +1,5 @@
 # setup github ssh keys manually first
+# yes | bash one-command-config.bash
 
 sudo apt-add-repository ppa:fish-shell/release-3
 sudo apt update
@@ -12,7 +13,7 @@ git clone git@github.com:wting/autojump.git --depth=10
 cd autojump
 ./install.py
 
-# will i have to touch config.fish?
+# will i have to touch config.fish? seems no
 
 fish_source="
 source ~/Documents/GitHub/mfa.fish/mfa.fish
