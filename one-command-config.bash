@@ -1,5 +1,7 @@
 # setup github ssh keys manually first
-# yes | bash one-command-config.bash
+# https://github.com/settings/ssh/new
+# ssh-keygen -t rsa
+# curl -o one-command-config.bash https://raw.githubusercontent.com/julyfun/personal-cfg/main/one-command-config.bash && yes | bash one-command-config.bash
 
 sudo apt-add-repository ppa:fish-shell/release-3
 sudo apt update
