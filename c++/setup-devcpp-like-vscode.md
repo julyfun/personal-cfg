@@ -10,6 +10,9 @@ keywords: []
 
 # Setup devcpp-like vscode
 
-https://github.com/julyfun/how-to/blob/f48c0e58682e09dfdf6a11dba6fd658c0fdf207d/os/windows/wsl/install-wsl-and-use-cmake-in-vscode.md?plain=1#L1
+https://github.com/julyfun/how-to/blob/f48c0e58682e09dfdf6a11dba6fd658c0fdf207d/os/windows/wsl/install-wsl-and-use-cmake-in-vscode.md
 
 https://github.com/julyfun/personal-cfg/blob/main/one-command-config.bash
+
+https://github.com/julyfun/how-to/blob/f48c0e58682e09dfdf6a11dba6fd658c0fdf207d/softwares-and-tools/vscode/setup/setup-basic-things-like-devcpp.md
+
