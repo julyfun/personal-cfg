@@ -1,8 +1,10 @@
-# setup github ssh keys manually first
-# https://github.com/settings/ssh/new
+# * 设置镜像源
+# * setup github ssh keys manually
 # ssh-keygen -t rsa
+# https://github.com/settings/ssh/new
 # curl -o one-command-config.bash https://raw.githubusercontent.com/julyfun/personal-cfg/main/one-command-config.bash && yes | bash one-command-config.bash
 
+# Sometimes failed
 sudo apt-add-repository ppa:fish-shell/release-3
 sudo apt update
 sudo apt install fish
@@ -26,6 +28,7 @@ source ~/Documents/GitHub/autojump/bin/autojump.fish
 
 echo "$fish_source" >> ~/.config/fish/config.fish
 
+# # Sometimes failed
 # mkdir -p ~/.mfa/bin
 # curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 # chmod u+x nvim.appimage
@@ -36,7 +39,10 @@ sudo add-apt-repository ppa:neovim-ppa/stable
 sudo apt-get update
 sudo apt-get install neovim
 
-mkdir ~/.config/nvim
+mkdir -p ~/.config/nvim
 cd ~/.config/nvim
 cp ~/Documents/GitHub/personal-cfg/init.vim .
+
+# chsh -s /usr/bin/fish
+# # Reboot
 
