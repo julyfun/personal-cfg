@@ -43,5 +43,5 @@ cd ~/.config/nvim
 cp ~/Documents/GitHub/personal-cfg/init.vim .
 
 # chsh -s /usr/bin/fish
-# # Reboot
+# # need reboot or gnome-session-quit
 
