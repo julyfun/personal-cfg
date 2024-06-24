@@ -1,5 +1,4 @@
-# * 设置镜像源
-# * setup github ssh keys manually
+# * 设置镜像源 * setup github ssh keys manually
 # ssh-keygen -t rsa
 # https://github.com/settings/ssh/new
 # curl -o one-command-config.bash https://raw.githubusercontent.com/julyfun/personal-cfg/main/one-command-config.bash && yes | bash one-command-config.bash
@@ -18,7 +17,7 @@ cd autojump
 ./install.py
 
 # will i have to touch config.fish? seems no
-
+# this echo sometimes failed i don't know why
 fish_source="
 source ~/Documents/GitHub/mfa.fish/mfa.fish
 source ~/Documents/GitHub/mfa.fish/jst.fish
