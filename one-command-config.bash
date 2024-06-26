@@ -1,7 +1,9 @@
-# * 设置镜像源 * setup github ssh keys manually
+# - 设置镜像源
+# https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/
+# - setup github ssh keys manually
 # ssh-keygen -t rsa
 # https://github.com/settings/ssh/new
-# curl -o one-command-config.bash https://raw.githubusercontent.com/julyfun/personal-cfg/main/one-command-config.bash && yes | bash one-command-config.bash
+# - curl -o one-command-config.bash https://raw.githubusercontent.com/julyfun/personal-cfg/main/one-command-config.bash && yes | bash one-command-config.bash
 
 # Sometimes failed
 sudo apt-add-repository ppa:fish-shell/release-3
@@ -27,7 +29,7 @@ source ~/Documents/GitHub/autojump/bin/autojump.fish
 
 echo "$fish_source" >> ~/.config/fish/config.fish
 
-# # Sometimes failed
+# # Sometimes failed 可能只有配好了 clash 才行
 # mkdir -p ~/.mfa/bin
 # curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 # chmod u+x nvim.appimage
