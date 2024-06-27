@@ -3,6 +3,8 @@
 # - setup github ssh keys manually
 # ssh-keygen -t rsa
 # https://github.com/settings/ssh/new
+# - sudo apt install git
+# - sudo apt install curl
 # - curl -o one-command-config.bash https://raw.githubusercontent.com/julyfun/personal-cfg/main/one-command-config.bash && yes | bash one-command-config.bash
 
 # Sometimes failed
@@ -38,7 +40,7 @@ echo "$fish_source" >> ~/.config/fish/config.fish
 # curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 # chmod u+x nvim.appimage
 # mv nvim.appimage ~/.mfa/bin/nvim
-# echo 'set PATH "$PATH:$HOME/.mfa/bin'
+# echo 'set PATH "$PATH:$HOME/.mfa/bin"' >> ~/.config/fish/config.fish
 
 sudo add-apt-repository ppa:neovim-ppa/stable
 sudo apt-get update
