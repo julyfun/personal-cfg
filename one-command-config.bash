@@ -20,6 +20,10 @@ cd autojump
 
 # will i have to touch config.fish? seems no
 # this echo sometimes failed i don't know why
+#
+mkdir -p ~/.config/fish
+touch ~/.config/fish/config.fish
+
 fish_source="
 source ~/Documents/GitHub/mfa.fish/mfa.fish
 source ~/Documents/GitHub/mfa.fish/jst.fish
