@@ -36,19 +36,19 @@ source ~/Documents/GitHub/autojump/bin/autojump.fish
 echo "$fish_source" >> ~/.config/fish/config.fish
 
 # # Sometimes failed 可能只有配好了 clash 才行
-# mkdir -p ~/.mfa/bin
-# curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
-# chmod u+x nvim.appimage
-# mv nvim.appimage ~/.mfa/bin/nvim
-# echo 'set PATH "$PATH:$HOME/.mfa/bin"' >> ~/.config/fish/config.fish
+mkdir -p ~/.mfa/bin
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+chmod u+x nvim.appimage
+mv nvim.appimage ~/.mfa/bin/nvim
+echo 'set PATH "$PATH:$HOME/.mfa/bin"' >> ~/.config/fish/config.fish
 
-sudo add-apt-repository ppa:neovim-ppa/stable
-sudo apt-get update
-sudo apt-get install neovim
-
-mkdir -p ~/.config/nvim
-cd ~/.config/nvim
-cp ~/Documents/GitHub/personal-cfg/init.vim .
+# sudo add-apt-repository ppa:neovim-ppa/stable
+# sudo apt-get update
+# sudo apt-get install neovim
+# 
+# mkdir -p ~/.config/nvim
+# cd ~/.config/nvim
+# cp ~/Documents/GitHub/personal-cfg/init.vim .
 
 # chsh -s /usr/bin/fish
 # # need reboot or gnome-session-quit
