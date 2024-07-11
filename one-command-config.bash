@@ -13,7 +13,7 @@ sudo apt update
 sudo apt install fish
 mkdir -p ~/Documents/GitHub
 cd ~/Documents/GitHub
-git clone git@github.com:julyfun/mfa.fish --depth=10
+git clone git@github.com:julyfun/jst.fish --depth=10
 git clone git@github.com:julyfun/kickstart.fish --depth=10
 git clone git@github.com:julyfun/personal-cfg --depth=10
 git clone git@github.com:wting/autojump.git --depth=10
@@ -27,8 +27,7 @@ mkdir -p ~/.config/fish
 touch ~/.config/fish/config.fish
 
 fish_source="
-source ~/Documents/GitHub/mfa.fish/mfa.fish
-source ~/Documents/GitHub/mfa.fish/jst.fish
+source ~/Documents/GitHub/jst.fish/jst.fish
 source ~/Documents/GitHub/kickstart.fish/kickstart.fish
 source ~/Documents/GitHub/autojump/bin/autojump.fish
 "
