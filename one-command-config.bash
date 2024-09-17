@@ -30,9 +30,8 @@ sudo apt install fish
 mkdir -p ~/Documents/GitHub
 cd ~/Documents/GitHub
 git clone https://github.com/julyfun/jst.fish --depth=10
-git clone https://github.com/julyfun/kickstart.fish --depth=10
 git clone https://github.com/julyfun/personal-cfg --depth=10
-git clone https://github.com/autojump.git --depth=10
+git clone https://github.com/wting/autojump.git --depth=10
 cd autojump
 ./install.py
 
@@ -44,7 +43,7 @@ touch ~/.config/fish/config.fish
 
 fish_source="
 source ~/Documents/GitHub/jst.fish/jst.fish
-source ~/Documents/GitHub/kickstart.fish/kickstart.fish
+source ~/Documents/GitHub/jst.fish/kickstart.fish
 source ~/Documents/GitHub/autojump/bin/autojump.fish
 "
 
