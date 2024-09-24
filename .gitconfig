@@ -1,0 +1,27 @@
+[core]
+	autocrlf = false
+	quotepath = false
+[user]
+	name = Julyfun MacOS14.5 M1
+	email = 43675484+julyfun@users.noreply.github.com
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[http]
+	version = HTTP/1.1
+# 2023.11.28 Julyfun 替代 https
+# https://github.com/Homebrew/legacy-homebrew/issues/34363
+[url "git@github.com:"]
+    insteadOf = "https://github.com/"
+
+[init]
+	defaultBranch = main
+[gui]
+	encoding = utf-8
+[i18n "commit"]
+	encoding = utf-8
+[i18n]
+	logoutputencoding = utf-8
+
