@@ -7,9 +7,9 @@ set nocompatible	" Use Vim defaults instead of 100% vi compatibility
 set backspace=2		" more powerful backspacing
 
 " Don't write backup file if vim is being called by "crontab -e"
-au BufWrite /private/tmp/crontab.* set nowritebackup nobackup
+" au BufWrite /private/tmp/crontab.* set nowritebackup nobackup
 " Don't write backup file if vim is being called by "chpass"
-au BufWrite /private/etc/pw.* set nowritebackup nobackup
+" au BufWrite /private/etc/pw.* set nowritebackup nobackup
 
 " 自定义设置
 " set mouse=a
@@ -115,23 +115,27 @@ xnoremap p pgvy
 " 这里用 noremap 则在 vim 编辑器和 VSCode 中行为不同
 " :map j gj
 " :map k gk
-:noremap ; 5gj
-:noremap , 5gk
+:map ; 5gj
+:map , 5gk
+" :map j gj " 这玩意导致 vscode neovim 缩到短行的时候会无法记住水平位置
+" 是因为 gk 会定位到 newline 符号上随后强制位移一次
+" :map k gk
 
 " [vim-plug]
-" call plug#begin()
+call plug#begin()
 " 像 vscode 一样的 cmd + d 多选
-" Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 " ]m 跳到 def 而不是 {
-" Plug 'jeetsukumaran/vim-pythonsense'
+Plug 'jeetsukumaran/vim-pythonsense'
 " delete surrounded parentheses
 " Plug 'tpope/vim-surround' 
 " 彩色括号
 " Plug 'luochen1990/rainbow'
-" let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
+let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 " Plug 'wakatime/vim-wakatime'
-" call plug#end()
+call plug#end()
 
 " [添加 Packer]
-" lua require('plugins')
+lua require('plugins')
+
 
