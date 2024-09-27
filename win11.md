@@ -8,3 +8,7 @@
 mkdir ~\AppData\Local\nvim; New-Item -Path ~\AppData\Local\nvim\init.vim -Type File
 ```
 
+## 软件安装好就行
+
+- utools - 就像聚焦搜索
+
