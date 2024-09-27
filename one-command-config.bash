@@ -21,6 +21,8 @@ fi
 # 以下安全更新软件源包含了官方源与镜像站配置，如有需要可自行修改注释切换
 sudo apt update
 sudo apt install git
+sudo apt install net-tools
+sudo apt install unzip
 sudo apt install vim # you can do anything with this editor
 sudo apt install curl
 # Sometimes failed
