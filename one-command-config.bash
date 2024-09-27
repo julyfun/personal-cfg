@@ -3,7 +3,7 @@
 # https://github.com/settings/ssh/new
 # - curl -o one-command-config.bash https://raw.githubusercontent.com/julyfun/personal-cfg/main/one-command-config.bash && yes | bash one-command-config.bash
 
-if [ "$(id -u)" -ne 0]; then
+if [ "$(id -u)" -ne 0 ]; then
     alias sudo='echo Non-root user, sudo is ignored:'
 fi
 
