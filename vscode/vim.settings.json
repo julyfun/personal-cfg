@@ -1,0 +1,50 @@
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.hlsearch": true,
+    "vim.normalModeKeyBindings": [
+        {
+            "before": [
+                ";"
+            ],
+            "commands": [
+                {
+                    "command": "cursorMove",
+                    "args": {
+                        "to": "down",
+                        "by": "line",
+                        "value": 5
+                    }
+                }
+            ]
+        },
+        {
+            "before": [
+                ","
+            ],
+            "commands": [
+                {
+                    "command": "cursorMove",
+                    "args": {
+                        "to": "up",
+                        "by": "wrappedLine",
+                        "value": 5
+                    }
+                }
+            ]
+        },
+    ],
+    "vim.visualModeKeyBindings": [
+        {
+            "before": [
+                ";"
+            ],
+            "commands": []
+        },
+        {
+            "before": [
+                ","
+            ],
+            "commands": []
+        }
+    ]
