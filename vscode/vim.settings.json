@@ -94,3 +94,11 @@
             ]
         },
     ],
+    "vim.handleKeys": {
+        "<C-d>": false,
+        "<C-k>": false,
+        "<C-c>": false,
+        "<C-a>": false,
+        "<C-f>": false,
+        "<C-h>": false
+    },
