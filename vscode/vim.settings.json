@@ -2,49 +2,95 @@
     "vim.incsearch": true,
     "vim.useSystemClipboard": true,
     "vim.hlsearch": true,
-    "vim.normalModeKeyBindings": [
+    "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": [
                 ";"
             ],
-            "commands": [
-                {
-                    "command": "cursorMove",
-                    "args": {
-                        "to": "down",
-                        "by": "line",
-                        "value": 5
-                    }
-                }
+            "after": [
+                "5",
+                "j"
             ]
         },
         {
             "before": [
                 ","
             ],
-            "commands": [
-                {
-                    "command": "cursorMove",
-                    "args": {
-                        "to": "up",
-                        "by": "wrappedLine",
-                        "value": 5
-                    }
-                }
+            "after": [
+                "5",
+                "k"
+            ]
+        },
+        {
+            "before": [
+                "d"
+            ],
+            "after": [
+                "\"",
+                "_",
+                "d"
+            ]
+        },
+        {
+            "before": [
+                "D"
+            ],
+            "after": [
+                "\"",
+                "_",
+                "D"
+            ]
+        },
+        {
+            "before": [
+                "d",
+                "d"
+            ],
+            "after": [
+                "\"",
+                "_",
+                "d",
+                "d"
+            ]
+        },
+        {
+            "before": [
+                "<BS>"
+            ],
+            "after": [
+                "\"",
+                "_",
+                "d"
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                ";"
+            ],
+            "after": [
+                "5",
+                "j"
+            ]
+        },
+        {
+            "before": [
+                ","
+            ],
+            "after": [
+                "5",
+                "k"
+            ]
+        },
+        {
+            "before": [
+                "d"
+            ],
+            "after": [
+                "\"",
+                "_",
+                "d"
             ]
         },
     ],
-    "vim.visualModeKeyBindings": [
-        {
-            "before": [
-                ";"
-            ],
-            "commands": []
-        },
-        {
-            "before": [
-                ","
-            ],
-            "commands": []
-        }
-    ]
