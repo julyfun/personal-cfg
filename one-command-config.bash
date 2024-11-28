@@ -18,7 +18,7 @@ deb http://security.ubuntu.com/ubuntu/ jammy-security main restricted universe m
 ver=$(grep VERSION_ID /etc/os-release | cut -d '"' -f 2 | tr -d '"')
 if [ "$ver" = "22.04"  ]; then
     sudo echo "$sc22" > /etc/apt/sources.list
-    # [TODO] 貌似有时候报错
+    # [TODO] 这个 echo 貌似有时候报错
 fi
 
 # 以下安全更新软件源包含了官方源与镜像站配置，如有需要可自行修改注释切换
@@ -41,28 +41,27 @@ git clone https://github.com/wting/autojump.git --depth=10
 cd autojump
 ./install.py
 
-# will i have to touch config.fish? seems no
-# this echo sometimes failed i don't know why
-#
+# [TODO] this echo sometimes failed i don't know why
 mkdir -p ~/.config/fish
 touch ~/.config/fish/config.fish
-
 fish_source="
 source ~/Documents/GitHub/jst.fish/jst.fish
 source ~/Documents/GitHub/jst.fish/kickstart.fish
 source ~/Documents/GitHub/autojump/bin/autojump.fish
 "
-
 echo "$fish_source" >> ~/.config/fish/config.fish
 
-# # Sometimes failed 可能只有配好了 clash 才行
-mkdir -p ~/app
-curl -LO https://mirror.ghproxy.com/https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
-chmod u+x nvim.appimage
-mv nvim.appimage ~/app/nvim
-echo 'set PATH "$PATH:$HOME/app"' >> ~/.config/fish/config.fish
+fish -c "jst get neovim"
 
 exec fish
+
+# [another neovim]
+# # Sometimes failed 可能只有配好了 clash 才行
+# mkdir -p ~/app
+# curl -LO https://mirror.ghproxy.com/https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+# chmod u+x nvim.appimage
+# mv nvim.appimage ~/app/nvim
+# echo 'set PATH "$PATH:$HOME/app"' >> ~/.config/fish/config.fish
 
 # [another nvim]
 # sudo add-apt-repository ppa:neovim-ppa/stable

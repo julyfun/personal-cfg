@@ -10,6 +10,7 @@ mkdir ~\AppData\Local\nvim; New-Item -Path ~\AppData\Local\nvim\init.vim -Type F
 
 ## 软件安装好就行
 
+- 输入法: 搜狗，防止乱切换中英文.
 - HiBitUninstaller: 实用卸载
 
 备用:
