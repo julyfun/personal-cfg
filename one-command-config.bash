@@ -1,25 +1,33 @@
 # [前置条件]
+# - Clash verge + yml
 # - https://github.com/settings/ssh/new
 # - curl -o one-command-config.bash https://raw.githubusercontent.com/julyfun/personal-cfg/main/one-command-config.bash && yes | bash one-command-config.bash
 # [备忘录]
 # - 设置镜像源
-# https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/
+#   https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/
 
 if [ "$(id -u)" -ne 0 ]; then
     alias sudo='echo Non-root user, sudo is ignored:'
 fi
 
-sc22=\
+ver=$(grep VERSION_ID /etc/os-release | cut -d '"' -f 2 | tr -d '"')
+if [ "$ver" = "22.04"  ]; then
+    apt_sc=\
 'deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy main restricted universe multiverse
 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-updates main restricted universe multiverse
 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-backports main restricted universe multiverse
 deb http://security.ubuntu.com/ubuntu/ jammy-security main restricted universe multiverse
 '
-ver=$(grep VERSION_ID /etc/os-release | cut -d '"' -f 2 | tr -d '"')
-if [ "$ver" = "22.04"  ]; then
-    sudo echo "$sc22" > /etc/apt/sources.list
-    # [TODO] 这个 echo 貌似有时候报错
+    # [TODO] 貌似有时候报错
+elif [ "$ver" = "20.04" ]; then
+    apt_sc=\
+'deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ fcal main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
+deb http://security.ubuntu.com/ubuntu/ focal-security main restricted universe multiverse
+'
 fi
+sudo echo "$apt_sc" > /etc/apt/sources.list
 
 # 以下安全更新软件源包含了官方源与镜像站配置，如有需要可自行修改注释切换
 sudo apt update
