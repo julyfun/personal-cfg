@@ -11,21 +11,41 @@ if [ "$(id -u)" -ne 0 ]; then
 fi
 
 ver=$(grep VERSION_ID /etc/os-release | cut -d '"' -f 2 | tr -d '"')
-if [ "$ver" = "22.04"  ]; then
-    apt_sc=\
+arch=$(uname -m)
+if [ "$arch" = "x86_64" ]; then
+    if [ "$ver" = "22.04"  ]; then
+        apt_sc=\
 'deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy main restricted universe multiverse
 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-updates main restricted universe multiverse
 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-backports main restricted universe multiverse
 deb http://security.ubuntu.com/ubuntu/ jammy-security main restricted universe multiverse
 '
-    # [TODO] 貌似有时候报错
-elif [ "$ver" = "20.04" ]; then
-    apt_sc=\
+        # [TODO] 貌似有时候报错
+    elif [ "$ver" = "20.04" ]; then
+        apt_sc=\
 'deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ fcal main restricted universe multiverse
 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
 deb http://security.ubuntu.com/ubuntu/ focal-security main restricted universe multiverse
 '
+    fi
+elif [ "$arch" = "aarch64" ]; then
+    if [ "$ver" = "22.04"  ]; then
+        apt_sc=\
+'deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ jammy main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ jammy-updates main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ jammy-backports main restricted universe multiverse
+deb http://ports.ubuntu.com/ubuntu-ports/ jammy-security main restricted universe multiverse
+'
+        # [TODO] 貌似有时候报错
+    elif [ "$ver" = "20.04" ]; then
+        apt_sc=\
+'deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ focal main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ focal-updates main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ focal-backports main restricted universe multiverse
+deb http://ports.ubuntu.com/ubuntu-ports/ focal-security main restricted universe multiverse
+'
+    fi
 fi
 sudo echo "$apt_sc" > /etc/apt/sources.list
 
