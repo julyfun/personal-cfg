@@ -106,9 +106,9 @@ exec fish
 # sudo apt-get update
 # sudo apt-get install neovim
 # 
-# mkdir -p ~/.config/nvim
-# cd ~/.config/nvim
-# cp ~/Documents/GitHub/personal-cfg/init.vim .
+ mkdir -p ~/.config/nvim
+ cd ~/.config/nvim
+ cp ~/Documents/GitHub/personal-cfg/init.vim .
 
 # [change shell]
 # chsh -s /usr/bin/fish
