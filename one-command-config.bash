@@ -2,6 +2,7 @@
 # - Clash verge + yml
 # - https://github.com/settings/ssh/new
 # - curl -o one-command-config.bash https://raw.githubusercontent.com/julyfun/personal-cfg/main/one-command-config.bash && yes | bash one-command-config.bash
+#     - don't use sudo while bash it, user folder changed
 # [备忘录]
 # - 设置镜像源
 #   https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/
@@ -47,7 +48,7 @@ deb http://ports.ubuntu.com/ubuntu-ports/ focal-security main restricted univers
 '
     fi
 fi
-sudo echo "$apt_sc" > /etc/apt/sources.list
+echo "$apt_sc" | sudo tee /etc/apt/sources.list
 
 # 以下安全更新软件源包含了官方源与镜像站配置，如有需要可自行修改注释切换
 sudo apt update
@@ -60,6 +61,15 @@ sudo apt install curl
 sudo apt-add-repository ppa:fish-shell/release-3
 sudo apt update
 sudo apt install fish
+
+github_ssh_config=\
+'Host github.com
+  Hostname 20.200.245.248
+  Port 443
+'
+
+echo "$github_ssh_config" >> ~/.ssh/config
+
 mkdir -p ~/Documents/GitHub
 cd ~/Documents/GitHub
 git clone https://github.com/julyfun/jst.fish --depth=10
