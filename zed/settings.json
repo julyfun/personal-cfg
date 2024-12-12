@@ -30,12 +30,12 @@
   "soft_wrap": "editor_width",
   "tab_bar": {
     "show": true
-  }
+  },
 
   // [https://github.com/zed-industries/zed/discussions/10801]
-  // "vim": {
-  //   "use_system_clipboard": "on_yank"
-  // }
+  "vim": {
+    "use_system_clipboard": "on_yank"
+  }
   // [end]
 }
 
