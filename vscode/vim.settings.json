@@ -127,10 +127,11 @@
         },
     ],
     "vim.handleKeys": {
-        "<C-d>": false,
-        "<C-k>": false,
-        "<C-c>": false,
         "<C-a>": false,
+        "<C-c>": false,
+        "<C-d>": false,
         "<C-f>": false,
-        "<C-h>": false
+        "<C-h>": false,
+        "<C-k>": false,
+        "<C-p>": false
     },
