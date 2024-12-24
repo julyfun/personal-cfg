@@ -55,8 +55,8 @@ sudo apt update
 sudo apt install git
 sudo apt install net-tools
 sudo apt install unzip
-sudo apt install vim # you can do anything with this editor
-sudo apt install curl
+sudo apt install vim
+sudo apt install curl tmux xclip
 # Sometimes failed
 sudo apt-add-repository ppa:fish-shell/release-3
 sudo apt update
