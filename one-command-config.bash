@@ -68,6 +68,7 @@ exec fish
 # sudo apt-get update
 # sudo apt-get install neovim
 # 
+# [setup neovim]
 # mkdir -p ~/.config/nvim
 # cd ~/.config/nvim
 # cp ~/Documents/GitHub/personal-cfg/init.vim .
