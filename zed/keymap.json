@@ -1,0 +1,37 @@
+[
+  {
+    "context": "Editor && VimControl && !VimWaiting && !menu",
+    "bindings": {
+      // put key-bindings here if you want them to work in normal & visual mode
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+    "bindings": {
+      // put key-bindings here if you want them to work only in normal mode
+      ";": ["workspace::SendKeystrokes", "5 j"],
+      ",": ["workspace::SendKeystrokes", "5 k"]
+    }
+  },
+  {
+    "context": "Editor && vim_mode == visual && !VimWaiting && !menu",
+    "bindings": {
+      // visual, visual line & visual block modes
+      ";": ["workspace::SendKeystrokes", "5 j"],
+      ",": ["workspace::SendKeystrokes", "5 k"]
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert && !menu",
+    "bindings": {
+      // put key-bindings here if you want them to work in insert mode
+    }
+  },
+  {
+    "bindings": {
+      // "cmd-]": "editor::GoToDiagnostic", // use g [
+      // "cmd-[": "editor::GoToPrevDiagnostic"
+    }
+  }
+]
+

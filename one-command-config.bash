@@ -1,37 +1,75 @@
 # [前置条件]
+# - Clash verge + yml
 # - https://github.com/settings/ssh/new
 # - curl -o one-command-config.bash https://raw.githubusercontent.com/julyfun/personal-cfg/main/one-command-config.bash && yes | bash one-command-config.bash
+#     - don't use sudo while bash it, user folder changed
 # [备忘录]
 # - 设置镜像源
-# https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/
+#   https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/
 
 if [ "$(id -u)" -ne 0 ]; then
     alias sudo='echo Non-root user, sudo is ignored:'
 fi
 
-sc22=\
+ver=$(grep VERSION_ID /etc/os-release | cut -d '"' -f 2 | tr -d '"')
+arch=$(uname -m)
+if [ "$arch" = "x86_64" ]; then
+    if [ "$ver" = "22.04"  ]; then
+        apt_sc=\
 'deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy main restricted universe multiverse
 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-updates main restricted universe multiverse
 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-backports main restricted universe multiverse
 deb http://security.ubuntu.com/ubuntu/ jammy-security main restricted universe multiverse
 '
-ver=$(grep VERSION_ID /etc/os-release | cut -d '"' -f 2 | tr -d '"')
-if [ "$ver" = "22.04"  ]; then
-    sudo echo "$sc22" > /etc/apt/sources.list
-    # [TODO] 这个 echo 貌似有时候报错
+        # [TODO] 貌似有时候报错
+    elif [ "$ver" = "20.04" ]; then
+        apt_sc=\
+'deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ fcal main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
+deb http://security.ubuntu.com/ubuntu/ focal-security main restricted universe multiverse
+'
+    fi
+elif [ "$arch" = "aarch64" ]; then
+    if [ "$ver" = "22.04"  ]; then
+        apt_sc=\
+'deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ jammy main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ jammy-updates main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ jammy-backports main restricted universe multiverse
+deb http://ports.ubuntu.com/ubuntu-ports/ jammy-security main restricted universe multiverse
+'
+        # [TODO] 貌似有时候报错
+    elif [ "$ver" = "20.04" ]; then
+        apt_sc=\
+'deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ focal main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ focal-updates main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ focal-backports main restricted universe multiverse
+deb http://ports.ubuntu.com/ubuntu-ports/ focal-security main restricted universe multiverse
+'
+    fi
 fi
+echo "$apt_sc" | sudo tee /etc/apt/sources.list
 
 # 以下安全更新软件源包含了官方源与镜像站配置，如有需要可自行修改注释切换
 sudo apt update
 sudo apt install git
 sudo apt install net-tools
 sudo apt install unzip
-sudo apt install vim # you can do anything with this editor
-sudo apt install curl
+sudo apt install vim
+sudo apt install curl tmux xclip
 # Sometimes failed
 sudo apt-add-repository ppa:fish-shell/release-3
 sudo apt update
 sudo apt install fish
+
+github_ssh_config=\
+'Host github.com
+  Hostname 20.200.245.248
+  Port 443
+'
+
+echo "$github_ssh_config" >> ~/.ssh/config
+
 mkdir -p ~/Documents/GitHub
 cd ~/Documents/GitHub
 git clone https://github.com/julyfun/jst.fish --depth=10
@@ -68,10 +106,9 @@ exec fish
 # sudo apt-get update
 # sudo apt-get install neovim
 # 
-# [setup neovim]
-# mkdir -p ~/.config/nvim
-# cd ~/.config/nvim
-# cp ~/Documents/GitHub/personal-cfg/init.vim .
+ mkdir -p ~/.config/nvim
+ cd ~/.config/nvim
+ cp ~/Documents/GitHub/personal-cfg/init.vim .
 
 # [change shell]
 # chsh -s /usr/bin/fish
