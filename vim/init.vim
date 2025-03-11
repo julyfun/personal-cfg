@@ -68,6 +68,8 @@ set relativenumber
 set clipboard=unnamedplus
 
 " [删除而不是剪切]
+nnoremap x "_x
+
 nnoremap d "_d
 vnoremap d "_d
 nnoremap D "_D
@@ -120,22 +122,3 @@ xnoremap p pgvy
 " :map j gj " 这玩意导致 vscode neovim 缩到短行的时候会无法记住水平位置
 " 是因为 gk 会定位到 newline 符号上随后强制位移一次
 " :map k gk
-
-" [vim-plug]
-" call plug#begin()
-" 像 vscode 一样的 cmd + d 多选
-" Plug 'mg979/vim-visual-multi', {'branch': 'master'}
-" ]m 跳到 def 而不是 {
-" Plug 'jeetsukumaran/vim-pythonsense'
-" delete surrounded parentheses
-" Plug 'tpope/vim-surround' 
-" 彩色括号
-" Plug 'luochen1990/rainbow'
-" let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
-" Plug 'wakatime/vim-wakatime'
-" call plug#end()
-
-" [添加 Packer]
-" lua require('plugins')
-
-
