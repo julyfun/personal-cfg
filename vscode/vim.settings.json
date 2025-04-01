@@ -5,6 +5,16 @@
     "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": [
+                "s"
+            ],
+            "after": [
+                "<leader>",
+                "<leader>",
+                "s"
+            ]
+        },
+        {
+            "before": [
                 ";"
             ],
             "after": [
@@ -75,6 +85,16 @@
     "vim.visualModeKeyBindingsNonRecursive": [
         {
             "before": [
+                "s"
+            ],
+            "after": [
+                "<leader>",
+                "<leader>",
+                "s"
+            ]
+        },
+        {
+            "before": [
                 ";"
             ],
             "after": [
@@ -115,7 +135,6 @@
     "vim.handleKeys": {
         "<C-a>": false,
         "<C-c>": false,
-        "<C-d>": false,
         "<C-f>": false,
         "<C-h>": false,
         "<C-k>": false,
