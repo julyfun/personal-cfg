@@ -1,3 +1,4 @@
+" version: 25.4.24
 " Configuration file for vim
 set modelines=0		" CVE-2007-2438
 
@@ -15,9 +16,6 @@ set backspace=2		" more powerful backspacing
 " set mouse=a
 
 let skip_defaults_vim=1
-
-syntax enable                " 打开语法高亮
-syntax on                    " 开启文件类型侦测
 
 colorscheme desert           " 着色模式:灰色背景
 set guifont=Monaco:h14
@@ -80,12 +78,6 @@ vnoremap c "_c
 xnoremap p pgvy
 
 " [括号补全]
-" inoremap ' ''<ESC>i
-" inoremap " ""<ESC>i
-" inoremap ( ()<ESC>i
-" inoremap [ []<ESC>i
-" inoremap { {}<ESC>i
-
 " [https://github.com/Houl/repmo-vim]
 " " map a motion and its reverse motion:
 " :noremap <expr> h repmo#SelfKey('h', 'l')|sunmap h
@@ -121,3 +113,4 @@ xnoremap p pgvy
 " :map j gj " 这玩意导致 vscode neovim 缩到短行的时候会无法记住水平位置
 " 是因为 gk 会定位到 newline 符号上随后强制位移一次
 " :map k gk
+
