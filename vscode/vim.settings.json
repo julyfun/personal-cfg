@@ -138,5 +138,6 @@
         "<C-f>": false,
         "<C-h>": false,
         "<C-k>": false,
-        "<C-p>": false
+        "<C-p>": false,
+        "<C-j>": false,
     },
