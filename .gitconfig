@@ -1,6 +1,6 @@
 [core]
 	autocrlf = false
-	quotepath = false
+	quotepath = false # 中文. not to escape non-ASCII characters in path names.
 [user]
 	name = Julyfun MacOS14.5 M1
 	email = 43675484+julyfun@users.noreply.github.com
