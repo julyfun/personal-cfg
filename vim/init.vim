@@ -77,6 +77,10 @@ vnoremap c "_c
 vnoremap < <gv
 vnoremap > >gv
 
+inoremap <Space> <Space><C-g>u
+inoremap <Tab> <Tab><C-g>u
+inoremap <CR> <CR><C-g>u
+
 " [括号补全]
 " [https://github.com/Houl/repmo-vim]
 " " map a motion and its reverse motion:

@@ -152,6 +152,38 @@
             ]
         }
     ],
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                " "
+            ],
+            "after": [
+                " ",
+                "<C-g>",
+                "u"
+            ]
+        },
+        {
+            "before": [
+                "<Tab>"
+            ],
+            "after": [
+                "<Tab>",
+                "<C-g>",
+                "u"
+            ]
+        },
+        {
+            "before": [
+                "<Enter>"
+            ],
+            "after": [
+                "<Enter>",
+                "<C-g>",
+                "u"
+            ]
+        }
+    ],
     "vim.handleKeys": {
         "<C-a>": false,
         "<C-c>": false,
