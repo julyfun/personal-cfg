@@ -74,8 +74,8 @@ nnoremap x "_x
 
 vnoremap d "_d
 vnoremap c "_c
-
-xnoremap p pgvy
+vnoremap < <gv
+vnoremap > >gv
 
 " [括号补全]
 " [https://github.com/Houl/repmo-vim]
