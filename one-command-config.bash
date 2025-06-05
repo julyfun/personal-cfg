@@ -74,7 +74,7 @@ mkdir -p ~/Documents/GitHub
 cd ~/Documents/GitHub
 git clone https://github.com/julyfun/jst.fish --depth=10
 git clone https://github.com/julyfun/personal-cfg --depth=10
-git clone https://github.com/how-to/personal-cfg --depth=10
+git clone https://github.com/julyfun/how-to --depth=10
 git clone https://github.com/wting/autojump.git --depth=10
 cd autojump
 ./install.py
