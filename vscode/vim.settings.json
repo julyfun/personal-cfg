@@ -1,195 +1,39 @@
+    // [vim]
     "vim.easymotion": true,
     "vim.incsearch": true,
     "vim.useSystemClipboard": true,
     "vim.hlsearch": true,
     "vim.normalModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                "s"
-            ],
-            "after": [
-                "<leader>",
-                "<leader>",
-                "s"
-            ]
-        },
-        {
-            "before": [
-                ";"
-            ],
-            "after": [
-                "5",
-                "j"
-            ]
-        },
-        {
-            "before": [
-                ","
-            ],
-            "after": [
-                "5",
-                "k"
-            ]
-        },
-        {
-            "before": [
-                "d"
-            ],
-            "after": [
-                "\"",
-                "_",
-                "d"
-            ]
-        },
-        {
-            "before": [
-                "D"
-            ],
-            "after": [
-                "\"",
-                "_",
-                "D"
-            ]
-        },
-        {
-            "before": [
-                "c"
-            ],
-            "after": [
-                "\"",
-                "_",
-                "c"
-            ]
-        },
-        {
-            "before": [
-                "C"
-            ],
-            "after": [
-                "\"",
-                "_",
-                "C"
-            ]
-        },
-        {
-            "before": [
-                "x"
-            ],
-            "after": [
-                "\"",
-                "_",
-                "x"
-            ]
-        }
+        { "before": ["s"], "after": ["<leader>", "<leader>", "s"] },
+        { "before": [";"], "after": ["5", "j"] },
+        { "before": [","], "after": ["5", "k"] },
+        { "before": ["d"], "after": ["\"", "_", "d"] },
+        { "before": ["D"], "after": ["\"", "_", "D"] },
+        { "before": ["c"], "after": ["\"", "_", "c"] },
+        { "before": ["C"], "after": ["\"", "_", "C"] },
+        { "before": ["x"], "after": ["\"", "_", "x"] },
+        { "before": ["g", "p"], "after": ["`", "[", "v", "`", "]"] },
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                "s"
-            ],
-            "after": [
-                "<leader>",
-                "<leader>",
-                "s"
-            ]
-        },
-        {
-            "before": [
-                ";"
-            ],
-            "after": [
-                "5",
-                "j"
-            ]
-        },
-        {
-            "before": [
-                ","
-            ],
-            "after": [
-                "5",
-                "k"
-            ]
-        },
-        {
-            "before": [
-                "d"
-            ],
-            "after": [
-                "\"",
-                "_",
-                "d"
-            ]
-        },
-        {
-            "before": [
-                "c"
-            ],
-            "after": [
-                "\"",
-                "_",
-                "c"
-            ]
-        },
-        {
-            "before": [
-                "<"
-            ],
-            "after": [
-                "<",
-                "g",
-                "v"
-            ]
-        },
-        {
-            "before": [
-                ">"
-            ],
-            "after": [
-                ">",
-                "g",
-                "v"
-            ]
-        }
+        { "before": ["s"], "after": ["<leader>", "<leader>", "s"] },
+        { "before": [";"], "after": ["5", "j"] },
+        { "before": [","], "after": ["5", "k"] },
+        { "before": ["d"], "after": ["\"", "_", "d"] },
+        { "before": ["c"], "after": ["\"", "_", "c"] },
+        { "before": ["<"], "after": ["<", "g", "v"] },
+        { "before": [">"], "after": [">", "g", "v"] },
     ],
     "vim.insertModeKeyBindings": [
-        {
-            "before": [
-                " "
-            ],
-            "after": [
-                " ",
-                "<C-g>",
-                "u"
-            ]
-        },
-        {
-            "before": [
-                "<Tab>"
-            ],
-            "after": [
-                "<Tab>",
-                "<C-g>",
-                "u"
-            ]
-        },
-        {
-            "before": [
-                "<Enter>"
-            ],
-            "after": [
-                "<Enter>",
-                "<C-g>",
-                "u"
-            ]
-        }
+        { "before": [" "], "after": [" ", "<C-g>", "u"] },
+        { "before": ["<Tab>"], "after": ["<Tab>", "<C-g>", "u"] },
+        { "before": ["<Enter>"], "after": ["<Enter>", "<C-g>", "u"] },
     ],
     "vim.handleKeys": {
-        "<C-a>": false,
-        "<C-c>": false,
-        "<C-f>": false,
-        "<C-h>": false,
-        "<C-k>": false,
-        "<C-p>": false,
-        "<C-j>": false,
+      "<C-a>": false,
+      "<C-c>": false,
+      "<C-f>": false,
+      "<C-h>": false,
+      "<C-k>": false,
+      "<C-p>": false,
+      "<C-j>": false
     },
