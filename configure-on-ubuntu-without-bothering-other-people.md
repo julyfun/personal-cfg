@@ -1,3 +1,5 @@
+[This is a bit outdated]
+
 ## ctrl shift t < konsole
 
 ```
@@ -50,5 +52,4 @@ in vscode install neovim extension, in settings you search neovim path and add t
 Shortcut settings: 
 
 View: Toggle Primary Side Bar Visibility > Add key bindings > ctrl + shift + B
-
 
