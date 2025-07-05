@@ -4,5 +4,6 @@
 - python
 - copilot
 - error lens
+- flash.vscode(latest) (sourav.ahmed) 无需配置
 - [?] gitlens
 
