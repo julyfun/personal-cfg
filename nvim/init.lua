@@ -75,15 +75,22 @@ require("lazy").setup({
       priority = 1000,
       opts = {},
     },
+    { "neovim/nvim-lspconfig" },
+    { 'hrsh7th/cmp-nvim-lsp' },
+    { 'hrsh7th/cmp-buffer' },
+    { 'hrsh7th/cmp-path' },
+    { 'hrsh7th/cmp-cmdline' },
+    { 'hrsh7th/nvim-cmp' },
   },
   -- automatically check for plugin updates
   checker = { enabled = true },
 })
 
--- [render-markdown]
+-- [markdown]
 require('render-markdown').setup({
     completions = { lsp = { enabled = true } },
 })
+require('nvim-cmp')
 
 -- [cmd]
 vim.cmd[[colorscheme tokyonight]]
