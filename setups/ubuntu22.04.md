@@ -19,7 +19,7 @@ git clone git@github.com:julyfun/how-to
 git clone git@github.com:julyfun/jst.fish
 
 echo "source $j/jst.fish/jst.fish" >> $fish_d/config.fish
-echo "source $j/jst.fish/kickstart.fish" >> $fish_d/config.fish
+echo "source $j/jst.fish/kickstart.fish" 
 exec fish
 
 # [personal-cfg]
@@ -27,12 +27,13 @@ cd $j/personal-cfg
 ln -s $(pwd)/.tmux.conf ~/.tmux.conf
 ln -s $(pwd)/nvim ~/.config/nvim
 
-jst path /home/linuxbrew/.linuxbrew/bin/
-jst source "zoxide init fish | source"
-jst source "source $j/personal-cfg/config.fish"
+jst config "eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+jst config "zoxide init fish | source"
+jst config "source $j/personal-cfg/config.fish"
 exec fish
 
 brew install tmux
+brew install tree
 brew install neovim
 brew install zoxide
 brew install fzf
