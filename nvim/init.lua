@@ -75,7 +75,9 @@ require("lazy").setup({
       priority = 1000,
       opts = {},
     },
-    { "neovim/nvim-lspconfig" },
+    { 
+      "neovim/nvim-lspconfig",
+    },
     { 'hrsh7th/cmp-nvim-lsp' },
     { 'hrsh7th/cmp-buffer' },
     { 'hrsh7th/cmp-path' },
@@ -103,5 +105,21 @@ require('render-markdown').setup({
 })
 require('plugins.nvim-cmp')
 
--- [cmd]
+-- [fish]
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = 'fish',
+  callback = function()
+    vim.lsp.start({
+      name = 'fish-lsp',
+      cmd = { 'fish-lsp', 'start' },
+      cmd_env = { fish_lsp_show_client_popups = false },
+    })
+  end,
+})
+
+-- [lsp]
+vim.diagnostic.config({ virtual_text = true })
+
+-- [color]
 vim.cmd[[colorscheme tokyonight]]
+
