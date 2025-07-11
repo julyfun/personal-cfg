@@ -24,7 +24,7 @@ exec fish
 
 # [personal-cfg]
 cd $j/personal-cfg
-cp .tmux.conf ~
+ln -s $(pwd)/.tmux.conf ~/.tmux.conf
 ln -s $(pwd)/nvim ~/.config/nvim
 
 jst path /home/linuxbrew/.linuxbrew/bin/
