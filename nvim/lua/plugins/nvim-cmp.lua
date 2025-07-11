@@ -76,6 +76,9 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 require('lspconfig')['pyright'].setup {
     capabilities = capabilities
 }
+require('lspconfig')['zls'].setup {
+    capabilities = capabilities
+}
 vim.lsp.config('rust_analyzer', {
   -- Server-specific settings. See `:help lsp-quickstart`
   settings = {

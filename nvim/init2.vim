@@ -1,16 +1,6 @@
-" version: 25.4.24
+" version: 25.7.11
 " Configuration file for vim
 set modelines=0		" CVE-2007-2438
-
-" Normally we use vim-extensions. If you want true vi-compatibility
-" remove change the following statements
-set nocompatible	" Use Vim defaults instead of 100% vi compatibility
-set backspace=2		" more powerful backspacing
-
-" Don't write backup file if vim is being called by "crontab -e"
-" au BufWrite /private/tmp/crontab.* set nowritebackup nobackup
-" Don't write backup file if vim is being called by "chpass"
-" au BufWrite /private/etc/pw.* set nowritebackup nobackup
 
 " 自定义设置
 " set mouse=a
@@ -56,7 +46,6 @@ set showcmd                  " 命令栏显示命令 "
 set ignorecase smartcase     " 搜索时智能忽略大小写
 set tabstop=4 " (ts) 设置一个 <tab> 显示为多少个空格
 set expandtab " (et) 把 <tab> 转换为空格
-set shiftwidth=4 " (sw) 设置自动缩进的宽度（以及 << 和 >> 命令）
 set number
 set relativenumber
 

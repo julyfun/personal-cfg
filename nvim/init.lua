@@ -88,7 +88,9 @@ require("lazy").setup({
     },
     { 'kkharji/sqlite.lua' },
     -- [vscode.file-tree]
-    { import = "plugins.neo-tree" }
+    { import = "plugins.neo-tree" },
+    -- [diagnostic[
+    { import = "plugins.trouble" },
     -- [end]
   },
   -- automatically check for plugin updates
@@ -103,4 +105,3 @@ require('plugins.nvim-cmp')
 
 -- [cmd]
 vim.cmd[[colorscheme tokyonight]]
-
