@@ -1,0 +1,4 @@
+```console
+cargo binstall ripgrep
+```
+

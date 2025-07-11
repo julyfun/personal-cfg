@@ -81,6 +81,15 @@ require("lazy").setup({
     { 'hrsh7th/cmp-path' },
     { 'hrsh7th/cmp-cmdline' },
     { 'hrsh7th/nvim-cmp' },
+    -- [vscode.quick-open]
+    {
+      'nvim-telescope/telescope.nvim', tag = '0.1.8',
+      dependencies = { 'nvim-lua/plenary.nvim' }
+    },
+    { 'kkharji/sqlite.lua' },
+    -- [vscode.file-tree]
+    { import = "plugins.neo-tree" }
+    -- [end]
   },
   -- automatically check for plugin updates
   checker = { enabled = true },
@@ -90,7 +99,7 @@ require("lazy").setup({
 require('render-markdown').setup({
     completions = { lsp = { enabled = true } },
 })
-require('nvim-cmp')
+require('plugins.nvim-cmp')
 
 -- [cmd]
 vim.cmd[[colorscheme tokyonight]]
