@@ -8,9 +8,9 @@ copy ssh key to github
 
 ```fish
 set fish_d ~/.config/fish
-mkdir -p $fish_d
-
 set j ~/Documents/GitHub/julyfun
+
+mkdir -p $fish_d
 mkdir -p $j
 cd $j
 
@@ -28,9 +28,13 @@ cp .tmux.conf ~
 ln -s $(pwd)/nvim ~/.config/nvim
 
 jst path /home/linuxbrew/.linuxbrew/bin/
+jst source "zoxide init fish | source"
+jst source "source $j/personal-cfg/config.fish"
 exec fish
 
 brew install tmux
 brew install neovim
+brew install zoxide
+brew install fzf
 ```
 
