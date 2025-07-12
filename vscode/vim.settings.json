@@ -30,10 +30,10 @@
     ],
     "vim.handleKeys": {
       "<C-a>": false,
+      "<C-b>": false,
       "<C-c>": false,
       "<C-f>": false,
       "<C-h>": false,
       "<C-k>": false,
-      "<C-p>": false,
-      "<C-j>": false
+      "<C-p>": false
     },
