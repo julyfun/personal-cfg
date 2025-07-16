@@ -79,9 +79,3 @@ require('lspconfig')['pyright'].setup {
 require('lspconfig')['zls'].setup {
     capabilities = capabilities
 }
-vim.lsp.config('rust_analyzer', {
-  -- Server-specific settings. See `:help lsp-quickstart`
-  settings = {
-    ['rust-analyzer'] = {},
-  },
-})

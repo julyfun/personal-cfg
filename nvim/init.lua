@@ -75,9 +75,6 @@ require("lazy").setup({
       priority = 1000,
       opts = {},
     },
-    { 
-      "neovim/nvim-lspconfig",
-    },
     { 'hrsh7th/cmp-nvim-lsp' },
     { 'hrsh7th/cmp-buffer' },
     { 'hrsh7th/cmp-path' },
@@ -89,10 +86,12 @@ require("lazy").setup({
       dependencies = { 'nvim-lua/plenary.nvim' }
     },
     { 'kkharji/sqlite.lua' },
-    -- [vscode.file-tree]
-    { import = "plugins.neo-tree" },
-    -- [diagnostic[
+    -- [diagnostic]
     { import = "plugins.trouble" },
+    { import = "plugins.lsp" },
+    { import = "plugins.rustaceanvim" },
+    -- [stacks (utility bundle)]
+    { import = "plugins.snacks" },
     -- [end]
   },
   -- automatically check for plugin updates
