@@ -8,13 +8,12 @@ set modelines=0		" CVE-2007-2438
 " colorscheme desert           " 着色模式:灰色背景
 set guifont=Monaco:h14
 
-set autoindent               " 自动对齐
 set backspace=2              " 设置退格键可用
-set cindent shiftwidth=4     " 自动缩进4空格
-set smartindent              " 智能自动缩进
 set ai!                      " 设置自动缩进
 set nu!                      " 显示行号
 set showmatch                " 显示括号配对情况
+set smartindent              " 智能自动缩进
+set cindent shiftwidth=4
 " set mouse=a                  " 启用鼠标
 set ruler                    " 右下角显示光标位置的状态行
 set incsearch                " 查找book时，当输入/b时会自动找到
