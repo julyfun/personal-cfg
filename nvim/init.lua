@@ -60,7 +60,6 @@ require("lazy").setup({
               "python", "rust", "markdown", "markdown_inline" },
             sync_install = false,
             highlight = { enable = true },
-            indent = { enable = true },
           })
       end
     },
