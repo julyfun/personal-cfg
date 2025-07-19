@@ -1,5 +1,11 @@
 ```console
 cargo binstall ripgrep
-brew install imagemagick # snacks.image
+# [snacks.image]
+brew install imagemagick gs tectonic
+bun install -g @mermaid-js/mermaid-cli
 ```
+
+$E^(->) + 2$
+
+$5*5 = 25$
 
