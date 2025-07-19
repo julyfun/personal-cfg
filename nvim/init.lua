@@ -82,6 +82,8 @@ require("lazy").setup({
     { 'hrsh7th/cmp-path' },
     { 'hrsh7th/cmp-cmdline' },
     { 'hrsh7th/nvim-cmp' },
+    -- [typst]
+    { import = "plugins.typst-preview" },
     -- [vscode.quick-open]
     {
       'nvim-telescope/telescope.nvim', tag = '0.1.8',
