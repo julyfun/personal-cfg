@@ -58,7 +58,7 @@ require("lazy").setup({
               "vimdoc", "query", "elixir",
               "heex", "javascript", "html",
               "python", "rust", "markdown",
-              "markdown_inline", "typst"
+              "markdown_inline", "latex", "typst"
             },
             sync_install = false,
             highlight = { enable = true },
