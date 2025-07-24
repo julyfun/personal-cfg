@@ -77,6 +77,7 @@ require("lazy").setup({
       priority = 1000,
       opts = {},
     },
+    { "EdenEast/nightfox.nvim" },
     { 'hrsh7th/cmp-nvim-lsp' },
     { 'hrsh7th/cmp-buffer' },
     { 'hrsh7th/cmp-path' },
@@ -110,6 +111,9 @@ require("lazy").setup({
 -- [markdown]
 require('render-markdown').setup({
     completions = { lsp = { enabled = true } },
+    code = {  
+        border = 'thin', -- or 'thick' or 'thin'  
+    },  
 })
 require('plugins.nvim-cmp')
 
@@ -129,5 +133,5 @@ vim.api.nvim_create_autocmd('FileType', {
 vim.diagnostic.config({ virtual_text = true })
 
 -- [color]
-vim.cmd[[colorscheme tokyonight]]
+vim.cmd[[colorscheme nightfox]]
 
