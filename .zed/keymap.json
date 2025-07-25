@@ -1,5 +1,11 @@
 [
   {
+    "context": "VimControl && !menu",
+    "bindings": {
+      "ctrl-j": "workspace::ToggleBottomDock"
+    }
+  },
+  {
     "context": "Editor && VimControl && !VimWaiting && !menu",
     "bindings": {
       // put key-bindings here if you want them to work in normal & visual mode
@@ -33,20 +39,5 @@
       // "cmd-[": "editor::GoToPrevDiagnostic"
     }
   }
-
-  // [https://github.com/zed-industries/zed/discussions/10801]
-  // {
-  //   "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
-  //   "bindings": {
-  //     "p": "editor::Paste"
-  //   }
-  // },
-  // {
-  //   "context": "Editor && vim_mode == visual && !VimWaiting && !menu",
-  //   "bindings": {
-  //     "x": "editor::Cut"
-  //   }
-  // }
-  // [end]
 ]
 
