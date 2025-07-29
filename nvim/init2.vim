@@ -63,6 +63,7 @@ vnoremap c "_c
 vnoremap < <gv
 vnoremap > >gv
 
+" [smaller undo step]
 inoremap <Space> <Space><C-g>u
 inoremap <Tab> <Tab><C-g>u
 inoremap <CR> <CR><C-g>u
