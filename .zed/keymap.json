@@ -16,7 +16,12 @@
     "bindings": {
       // put key-bindings here if you want them to work only in normal mode
       ";": ["workspace::SendKeystrokes", "5 j"],
-      ",": ["workspace::SendKeystrokes", "5 k"]
+      ",": ["workspace::SendKeystrokes", "5 k"],
+      "d": ["workspace::SendKeystrokes", "\" _ d"],
+      "c": ["workspace::SendKeystrokes", "\" _ c"],
+      "D": ["workspace::SendKeystrokes", "\" _ D"],
+      "C": ["workspace::SendKeystrokes", "\" _ C"],
+      "x": ["workspace::SendKeystrokes", "\" _ x"]
     }
   },
   {
@@ -24,14 +29,16 @@
     "bindings": {
       // visual, visual line & visual block modes
       ";": ["workspace::SendKeystrokes", "5 j"],
-      ",": ["workspace::SendKeystrokes", "5 k"]
+      ",": ["workspace::SendKeystrokes", "5 k"],
+      "d": ["workspace::SendKeystrokes", "\" _ d"],
+      "c": ["workspace::SendKeystrokes", "\" _ c"],
+      "<": ["workspace::SendKeystrokes", "< g v"],
+      ">": ["workspace::SendKeystrokes", "> g v"]
     }
   },
   {
     "context": "Editor && vim_mode == insert && !menu",
-    "bindings": {
-      // put key-bindings here if you want them to work in insert mode
-    }
+    "bindings": {}
   },
   {
     "bindings": {
@@ -40,4 +47,5 @@
     }
   }
 ]
+
 
