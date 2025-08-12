@@ -6,6 +6,7 @@ bun install -g @mermaid-js/mermaid-cli
 brew install tree-sitter node
 # [lsp]
 brew install pyright
+cargo install tree-sitter-cli
 ```
 
 $E^(->) + 2$
