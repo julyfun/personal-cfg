@@ -13,3 +13,7 @@ $E^(->) + 2$
 
 $5*5 = 25$
 
+## About
+How did I turn on error lens?
+- `vim.diagnostic.config({ virtual_text = true })`
+

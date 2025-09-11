@@ -4,7 +4,6 @@
     "vim.useSystemClipboard": true,
     "vim.hlsearch": true,
     "vim.normalModeKeyBindingsNonRecursive": [
-        { "before": ["s"], "after": ["<leader>", "<leader>", "s"] },
         { "before": [";"], "after": ["5", "j"] },
         { "before": [","], "after": ["5", "k"] },
         { "before": ["d"], "after": ["\"", "_", "d"] },
@@ -13,15 +12,19 @@
         { "before": ["C"], "after": ["\"", "_", "C"] },
         { "before": ["x"], "after": ["\"", "_", "x"] },
         { "before": ["g", "p"], "after": ["`", "[", "v", "`", "]"] },
+        { "before": ["J"], "after": [":", "m", "+", "<Enter>"] },
+        { "before": ["K"], "after": [":", "m", "-", "2", "<Enter>"] },
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
-        { "before": ["s"], "after": ["<leader>", "<leader>", "s"] },
         { "before": [";"], "after": ["5", "j"] },
         { "before": [","], "after": ["5", "k"] },
         { "before": ["d"], "after": ["\"", "_", "d"] },
         { "before": ["c"], "after": ["\"", "_", "c"] },
         { "before": ["<"], "after": ["<", "g", "v"] },
         { "before": [">"], "after": [">", "g", "v"] },
+        // [still bugs]
+        { "before": ["J"], "after": [":", "m", "'", ">", "+", "<Enter>", "g", "v"] },
+        { "before": ["K"], "after": [":", "m", "'", "<", "-", "2", "<Enter>", "g", "v"] },
     ],
     "vim.insertModeKeyBindings": [
         { "before": [" "], "after": [" ", "<C-g>", "u"] },
