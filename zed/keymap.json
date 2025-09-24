@@ -2,7 +2,6 @@
   {
     "context": "Editor && VimControl && !VimWaiting && !menu",
     "bindings": {
-      "cmd-s": "workspace::SaveWithoutFormat"
     }
   },
   {
@@ -13,7 +12,9 @@
       "d": ["workspace::SendKeystrokes", "\" _ d"],
       "D": ["workspace::SendKeystrokes", "\" _ D"],
       "c": ["workspace::SendKeystrokes", "\" _ c"],
-      "C": ["workspace::SendKeystrokes", "\" _ C"]
+      "C": ["workspace::SendKeystrokes", "\" _ C"],
+      "J": "editor::MoveLineDown",
+      "K": "editor::MoveLineUp"
     }
   },
   {
@@ -41,4 +42,3 @@
     }
   }
 ]
-

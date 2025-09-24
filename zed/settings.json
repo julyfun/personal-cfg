@@ -20,7 +20,11 @@
   "buffer_font_size": 15,
   "vim_mode": true,
   "relative_line_numbers": true,
-  "format_on_save": "on",
+
+  "format_on_save": "off",
+  "remove_trailing_whitespace_on_save": false,
+  "ensure_final_newline_on_save": false,
+
   "performance.show_in_status_bar": true,
   "soft_wrap": "editor_width",
   "tab_bar": {
