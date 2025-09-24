@@ -2,13 +2,12 @@
   {
     "context": "Editor && VimControl && !VimWaiting && !menu",
     "bindings": {
-      // put key-bindings here if you want them to work in normal & visual mode
+      "cmd-s": "workspace::SaveWithoutFormat"
     }
   },
   {
     "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
     "bindings": {
-      // put key-bindings here if you want them to work only in normal mode
       ";": ["workspace::SendKeystrokes", "5 j"],
       ",": ["workspace::SendKeystrokes", "5 k"],
       "d": ["workspace::SendKeystrokes", "\" _ d"],
@@ -20,15 +19,19 @@
   {
     "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
     "bindings": {
-      // put key-bindings here if you want them to work only in normal mode
       "x": ["workspace::SendKeystrokes", "\" _ x"]
     }
   },
-
+  {
+    "context": "Editor && vim_mode == visual && !VimWaiting && !menu",
+    "bindings": {
+      "<": ["workspace::SendKeystrokes", "< g v"],
+      ">": ["workspace::SendKeystrokes", "> g v"]
+    }
+  },
   {
     "context": "Editor && vim_mode == insert && !menu",
     "bindings": {
-      // put key-bindings here if you want them to work in insert mode
     }
   },
   {
@@ -37,7 +40,5 @@
       // "cmd-[": "editor::GoToPrevDiagnostic"
     }
   }
-
-  // [end]
 ]
 
