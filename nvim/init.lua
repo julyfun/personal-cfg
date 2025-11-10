@@ -71,13 +71,8 @@ require("lazy").setup({
       dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' }, -- if you use the mini.nvim suite
       opts = {},
     },
-    {
-      "folke/tokyonight.nvim",
-      lazy = false,
-      priority = 1000,
-      opts = {},
-    },
-    { "EdenEast/nightfox.nvim" },
+    -- [theme]
+    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
     { 'hrsh7th/cmp-nvim-lsp' },
     { 'hrsh7th/cmp-buffer' },
     { 'hrsh7th/cmp-path' },
@@ -133,5 +128,5 @@ vim.api.nvim_create_autocmd('FileType', {
 vim.diagnostic.config({ virtual_text = true })
 
 -- [color]
-vim.cmd[[colorscheme nightfox]]
+vim.cmd[[colorscheme catppuccin-frappe]]
 
