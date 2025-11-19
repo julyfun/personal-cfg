@@ -96,7 +96,6 @@ require("lazy").setup({
     { import = "plugins.snacks" },
     -- [copilot]
     { 'github/copilot.vim' },
-    { import = "plugins.CopilotChat" },
     -- [end]
   },
   -- automatically check for plugin updates

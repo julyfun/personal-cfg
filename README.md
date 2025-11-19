@@ -1,3 +1,5 @@
+## Keep useful configs minimal
+
 47.103.61.134
 
 To find your notes:

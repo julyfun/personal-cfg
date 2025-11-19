@@ -7,6 +7,7 @@ fish
 copy ssh key to github
 
 ```fish
+# [jst]
 set fish_d ~/.config/fish
 set j ~/Documents/GitHub/julyfun
 
@@ -23,6 +24,7 @@ echo "source $j/jst.fish/kickstart.fish"
 exec fish
 
 # [personal-cfg]
+set j ~/Documents/GitHub/julyfun
 cd $j/personal-cfg
 ln -s $(pwd)/.tmux.conf ~/.tmux.conf
 ln -s $(pwd)/nvim ~/.config/nvim
