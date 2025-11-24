@@ -79,7 +79,7 @@ require("lazy").setup({
     -- [stacks (utility bundle)]
     { import = "plugins.snacks" },
     -- [copilot]
-    { 'github/copilot.vim' },
+    -- { 'github/copilot.vim' },
     -- [end]
   },
   -- automatically check for plugin updates
