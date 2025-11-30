@@ -4,4 +4,3 @@ font-family = "0xProto Nerd Font"
 
 keybind = cmd+opt+arrow_left=previous_tab
 keybind = cmd+opt+arrow_right=next_tab
-
