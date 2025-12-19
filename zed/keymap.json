@@ -38,5 +38,16 @@
       // "cmd-]": "editor::GoToDiagnostic", // use g [
       // "cmd-[": "editor::GoToPrevDiagnostic"
     }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-shift-d": [
+        "editor::SelectNext",
+        {
+          "replace_newest": false
+        }
+      ]
+    }
   }
 ]

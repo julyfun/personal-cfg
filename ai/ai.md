@@ -3,12 +3,11 @@
 
 我还没学并行理论，你的每行证明后面请附加一个符号解释 & 整行翻译，强互模拟之类的专有名词也要通俗或简洁解释（别比喻）
 
-keep the answer simple. Don't answer a pile of trivial/irrelavent things 
+keep the answer simple. Don't answer a pile of trivial/irrelavent comments/explanation. Don't write a doc to explain.
 
 ## Coding
 - Prioritize code correctness and clarity. Speed and efficiency are secondary priorities unless otherwise specified.
 - Do not write organizational or comments that summarize the code. Comments should only be written in order to explain "why" the code is written in some way in the case there is a reason that is tricky / non-obvious.
-- The code you added should be as simple as possible.
 
 ## python 通用编码标准
 - 使用`typing`库把所有函数的输入变量类型和输出类型都显式声明。
