@@ -53,6 +53,9 @@
           "replace_newest": false
         }
       ]
+    }
+  },
+  {
     "context": "ContextEditor > Editor",
     "bindings": {
       "cmd-shift-g": null
