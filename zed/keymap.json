@@ -1,7 +1,11 @@
 [
   {
-    "context": "Editor && VimControl && !VimWaiting && !menu",
-    "bindings": {}
+    "context": "Editor || Workspace",
+    "bindings": {
+      "cmd-shift-g": "git_panel::ToggleFocus",
+      "cmd-shift-space": "editor::ShowCompletions",
+      "alt-z": "editor::ToggleSoftWrap"
+    }
   },
   {
     "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
@@ -31,7 +35,8 @@
   },
   {
     "context": "Editor && vim_mode == insert && !menu",
-    "bindings": {}
+    "bindings": {
+    }
   },
   {
     "bindings": {
@@ -48,6 +53,16 @@
           "replace_newest": false
         }
       ]
+    "context": "ContextEditor > Editor",
+    "bindings": {
+      "cmd-shift-g": null
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "cmd-shift-g": null
     }
   }
 ]
+
