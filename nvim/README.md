@@ -6,7 +6,7 @@ brew install imagemagick gs tectonic
 bun install -g @mermaid-js/mermaid-cli
 brew install tree-sitter node
 # [lsp]
-brew install pyright
+uv tool install pyright[nodejs] # runs lsp well for Server. may take some time to launch
 cargo install tree-sitter-cli
 ```
 

@@ -9,6 +9,7 @@ alias buf="nvim ~/Documents/GitHub/julyfun/buffer/buffer.md"
 alias pe="nvim ~/Documents/GitHub/julyfun/how-to/notes/julyfun/peoples.md"
 alias pa="nvim ~/Documents/GitHub/julyfun/how-to/notes/julyfun/papers.md"
 alias zel='zellij --layout (echo -e "layout {\n    pane\n}\npane_frames false" | psub)'
+alias e='exec fish'
 
 set -gx HF_ENDPOINT "https://hf-mirror.com"
 
