@@ -1,13 +1,13 @@
 set HOW "~/Documents/GitHub/julyfun/how-to"
-alias note="nvim $HOW/notes/julyfun/240730-摸鱼日志.md"
-alias notes="jd $HOW/notes/julyfun/ $argv"
-alias notej="cd $HOW/notes/julyfun/"
+alias note="nvim $HOW/240730-摸鱼日志.md"
+alias notes="jd $HOW/julyfun/ $argv"
+alias notej="cd $HOW/julyfun/"
 alias how="jd ~/Documents/GitHub/julyfun/how-to $argv"
 alias key="echo Use '`<leader>sk` instead'"
 alias do="nvim ~/Documents/GitHub/julyfun/buffer/doing.md"
 alias buf="nvim ~/Documents/GitHub/julyfun/buffer/buffer.md"
-alias pe="nvim ~/Documents/GitHub/julyfun/how-to/peoples.md"
-alias pa="nvim ~/Documents/GitHub/julyfun/how-to/papers.md"
+alias pe="nvim $HOW/peoples.md"
+alias pa="nvim $HOW/papers.md"
 alias zel='zellij --layout (echo -e "layout {\n    pane\n}\npane_frames false" | psub)'
 alias e='exec fish'
 
