@@ -6,8 +6,8 @@ alias how="jd ~/Documents/GitHub/julyfun/how-to $argv"
 alias key="echo Use '`<leader>sk` instead'"
 alias do="nvim ~/Documents/GitHub/julyfun/buffer/doing.md"
 alias buf="nvim ~/Documents/GitHub/julyfun/buffer/buffer.md"
-alias pe="nvim ~/Documents/GitHub/julyfun/how-to/notes/julyfun/peoples.md"
-alias pa="nvim ~/Documents/GitHub/julyfun/how-to/notes/julyfun/papers.md"
+alias pe="nvim ~/Documents/GitHub/julyfun/how-to/peoples.md"
+alias pa="nvim ~/Documents/GitHub/julyfun/how-to/papers.md"
 alias zel='zellij --layout (echo -e "layout {\n    pane\n}\npane_frames false" | psub)'
 alias e='exec fish'
 
