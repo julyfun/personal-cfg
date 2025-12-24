@@ -47,6 +47,8 @@ set tabstop=4 " (ts) 设置一个 <tab> 显示为多少个空格
 set expandtab " (et) 把 <tab> 转换为空格
 set number
 set relativenumber
+" ref: https://stackoverflow.com/questions/10488717/how-can-i-permanently-display-the-path-of-the-current-file-in-vim
+set statusline+=%F
 
 " [总是使用系统粘贴板]
 set clipboard=unnamedplus

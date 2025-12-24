@@ -116,3 +116,5 @@ vim.cmd[[colorscheme catppuccin-frappe]]
 -- [keymap]
 -- hover
 vim.api.nvim_set_keymap("n", "gh", ":lua vim.diagnostic.open_float()<CR>", { noremap = true, silent = false })
+vim.api.nvim_set_keymap("n", "<F2>", ":lua vim.lsp.buf.rename()<CR>", { noremap = true, silent = false })
+
