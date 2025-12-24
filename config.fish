@@ -1,7 +1,10 @@
+source ~/Documents/GitHub/julyfun/jst.fish/jst.fish
+source ~/Documents/GitHub/julyfun/jst.fish/kickstart.fish
+
 set HOW "~/Documents/GitHub/julyfun/how-to"
 alias note="nvim $HOW/240730-摸鱼日志.md"
-alias notes="jd $HOW/julyfun/ $argv"
-alias notej="cd $HOW/julyfun/"
+alias notes="jd $HOW $argv"
+alias notej="cd $HOW"
 alias how="jd ~/Documents/GitHub/julyfun/how-to $argv"
 alias key="echo Use '`<leader>sk` instead'"
 alias do="nvim ~/Documents/GitHub/julyfun/buffer/doing.md"

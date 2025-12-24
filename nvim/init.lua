@@ -1,8 +1,5 @@
 local vimrc = vim.fn.stdpath("config") .. "/init2.vim"
 vim.cmd.source(vimrc)
--- [keymap]
--- hover
-vim.api.nvim_set_keymap("n", "gh", ":lua vim.diagnostic.open_float()<CR>", { noremap = true, silent = false })
 
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -116,3 +113,6 @@ vim.diagnostic.config({ virtual_text = true })
 -- [color]
 vim.cmd[[colorscheme catppuccin-frappe]]
 
+-- [keymap]
+-- hover
+vim.api.nvim_set_keymap("n", "gh", ":lua vim.diagnostic.open_float()<CR>", { noremap = true, silent = false })

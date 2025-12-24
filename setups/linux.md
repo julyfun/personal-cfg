@@ -28,7 +28,7 @@ set j ~/Documents/GitHub/julyfun
 cd $j/personal-cfg
 ln -s $(pwd)/.tmux.conf ~/.tmux.conf
 ln -s $(pwd)/nvim ~/.config/nvim
-ln -s $(pwd)/ghostty/config $XDG_CONFIG_HOME/ghostty/confi
+ln -s $(pwd)/ghostty/config ~/.config/ghostty/config
 
 jst config "eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 jst config "zoxide init fish | source"
