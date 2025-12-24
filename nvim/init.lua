@@ -111,7 +111,7 @@ vim.api.nvim_create_autocmd('FileType', {
 vim.diagnostic.config({ virtual_text = true })
 
 -- [color]
-vim.cmd[[colorscheme catppuccin-frappe]]
+vim.cmd[[colorscheme catppuccin-mocha]]
 
 -- [keymap]
 -- hover
