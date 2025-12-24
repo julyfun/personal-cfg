@@ -12,7 +12,7 @@ alias do="nvim ~/Documents/GitHub/julyfun/buffer/doing.md"
 alias buf="nvim ~/Documents/GitHub/julyfun/buffer/buffer.md"
 alias pe="nvim $HOW/peoples.md"
 alias pa="nvim $HOW/papers.md"
-alias zel="zellij --layout $PSN_PATH/zellij/layout.kdl --config $PSN_PATH/zellij/config.kdl"
+alias zel="zellij --layout $PSN_PATH/zellij/layout.kdl"
 alias e='exec fish'
 
 set -gx HF_ENDPOINT "https://hf-mirror.com"
