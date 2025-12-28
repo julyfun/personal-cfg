@@ -80,6 +80,8 @@ require("lazy").setup({
     { import = "plugins.snacks" },
     -- [copilot]
     -- { 'github/copilot.vim' },
+    -- [wakatime]
+    { 'wakatime/vim-wakatime', lazy = false }
     -- [end]
   },
   -- automatically check for plugin updates
