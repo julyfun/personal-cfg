@@ -70,12 +70,14 @@ sources = cmp.config.sources({
 matching = { disallow_symbol_nonprefix_matching = false }
 })
 
--- Set up lspconfig.
+-- Set up lspconfig for Neovim 0.11+
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
--- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-require('lspconfig')['pyright'].setup {
-    capabilities = capabilities
-}
-require('lspconfig')['zls'].setup {
-    capabilities = capabilities
-}
+
+-- Configure LSP servers using vim.lsp.config (Neovim 0.11+)
+vim.lsp.config('pyright', {
+    capabilities = capabilities,
+})
+
+vim.lsp.config('zls', {
+    capabilities = capabilities,
+})

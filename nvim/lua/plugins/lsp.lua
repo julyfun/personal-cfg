@@ -1,17 +1,10 @@
 return {
     {
         "neovim/nvim-lspconfig",
+        lazy = false,
         config = function()
-            local lspconfig = require('lspconfig')
-            lspconfig.sourcekit.setup {
-                capabilities = {
-                    workspace = {
-                        didChangeWatchedFiles = {
-                            dynamicRegistration = true,
-                        },
-                    },
-                },
-            }
+            -- For Neovim 0.11+, use vim.lsp.config
+            vim.lsp.config('sourcekit', {})
         end,
     }
 }
