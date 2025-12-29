@@ -34,6 +34,20 @@ require("lazy").setup({
       "nvim-treesitter/nvim-treesitter",
       lazy = false,
       build = ":TSUpdate",
+      config = function()
+        require("nvim-treesitter").setup({
+          ensure_installed = {
+            "c", "lua", "vim",
+            "vimdoc", "query", "elixir",
+            "heex", "javascript", "html",
+            "python", "rust", "markdown",
+            "markdown_inline", "latex",  -- Add latex for math rendering
+            "typst"
+          },
+          sync_install = false,
+          highlight = { enable = true },
+        })
+      end
     },
     -- [markdown]
     {
@@ -77,9 +91,12 @@ require("lazy").setup({
 -- [markdown]
 require('render-markdown').setup({
     completions = { lsp = { enabled = true } },
-    code = {  
-        border = 'thin', -- or 'thick' or 'thin'  
-    },  
+    code = {
+        border = 'thin', -- or 'thick' or 'thin'
+    },
+    latex = {
+        enabled = false,
+    },
 })
 require('plugins.nvim-cmp')
 
