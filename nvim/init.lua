@@ -44,7 +44,7 @@ require("lazy").setup({
             "markdown_inline", "latex",  -- Add latex for math rendering
             "typst"
           },
-          sync_install = false,
+          auto_install = true,
           highlight = { enable = true },
         })
       end
