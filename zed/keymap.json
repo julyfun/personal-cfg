@@ -10,8 +10,10 @@
   {
     "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
     "bindings": {
-      ";": ["workspace::SendKeystrokes", "5 j"],
-      ",": ["workspace::SendKeystrokes", "5 k"],
+      "j": ["workspace::SendKeystrokes", "g j"],
+      "k": ["workspace::SendKeystrokes", "g k"],
+      ";": ["workspace::SendKeystrokes", "5 g j"],
+      ",": ["workspace::SendKeystrokes", "5 g k"],
       "d": ["workspace::SendKeystrokes", "\" _ d"],
       "D": ["workspace::SendKeystrokes", "\" _ D"],
       "c": ["workspace::SendKeystrokes", "\" _ c"],
