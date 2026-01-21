@@ -105,10 +105,10 @@ vnoremap K :m'<-2<CR>gv
 " :let g:repmo_require_count = 1
 
 " 这里用 noremap 则在 vim 编辑器和 VSCode 中行为不同
-" :map j gj
-" :map k gk
-:map ; 5gj
-:map , 5gk
+:noremap j gj
+:noremap k gk
+:noremap ; 5gj
+:noremap , 5gk
 " :map j gj " 这玩意导致 vscode neovim 缩到短行的时候会无法记住水平位置
 " 是因为 gk 会定位到 newline 符号上随后强制位移一次
 " :map k gk
