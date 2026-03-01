@@ -6,6 +6,8 @@
       "cmd-shift-space": "editor::ShowCompletions",
       "alt-z": "editor::ToggleSoftWrap"
     }
+    "context": "Editor && VimControl && !VimWaiting && !menu",
+    "bindings": {}
   },
   {
     "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
@@ -37,8 +39,7 @@
   },
   {
     "context": "Editor && vim_mode == insert && !menu",
-    "bindings": {
-    }
+    "bindings": {}
   },
   {
     "bindings": {
@@ -70,4 +71,3 @@
     }
   }
 ]
-
