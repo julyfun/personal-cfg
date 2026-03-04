@@ -1,5 +1,4 @@
-    // [vim]
-    "vim.easymotion": true,
+   // [vim]
     "vim.incsearch": true,
     "vim.useSystemClipboard": true,
     "vim.hlsearch": true,
