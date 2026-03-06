@@ -3,6 +3,7 @@ source ~/Documents/GitHub/julyfun/jst.fish/jst.fish
 source ~/Documents/GitHub/julyfun/jst.fish/kickstart.fish
 
 set HOW "~/Documents/GitHub/julyfun/how-to"
+alias auto="bash $PSN_PATH/auto/auto.sh"
 alias note="nvim $HOW/240730-摸鱼日志.md"
 alias notes="jd $HOW $argv"
 alias notej="cd $HOW"
