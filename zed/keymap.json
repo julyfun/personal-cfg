@@ -5,7 +5,9 @@
       "cmd-shift-g": "git_panel::ToggleFocus",
       "cmd-shift-space": "editor::ShowCompletions",
       "alt-z": "editor::ToggleSoftWrap"
-    }
+    },
+  },
+  {
     "context": "Editor && VimControl && !VimWaiting && !menu",
     "bindings": {}
   },
