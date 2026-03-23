@@ -8,3 +8,4 @@ keybind = shift+arrow_left=previous_tab
 keybind = shift+arrow_right=next_tab
 keybind = shift+enter=text:\x1b\r
 
+clipboard-paste-protection = false
