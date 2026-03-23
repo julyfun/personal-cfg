@@ -50,6 +50,12 @@
     }
   },
   {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-1": "editor::ToggleFocus",
+    }
+  },
+  {
     "context": "Editor",
     "bindings": {
       "ctrl-shift-d": [
@@ -60,16 +66,4 @@
       ]
     }
   },
-  {
-    "context": "ContextEditor > Editor",
-    "bindings": {
-      "cmd-shift-g": null
-    }
-  },
-  {
-    "context": "Pane",
-    "bindings": {
-      "cmd-shift-g": null
-    }
-  }
 ]
