@@ -50,9 +50,9 @@
     }
   },
   {
-    "context": "Workspace",
+    "context": "Workspace || Editor",
     "bindings": {
-      "cmd-1": "editor::ToggleFocus",
+      "ctrl-;": "editor::ToggleFocus",
     }
   },
   {

@@ -7,5 +7,6 @@ keybind = cmd+opt+arrow_right=next_tab
 keybind = shift+arrow_left=previous_tab
 keybind = shift+arrow_right=next_tab
 keybind = shift+enter=text:\x1b\r
+keybind = global:ctrl+t=toggle_quick_terminal
 
 clipboard-paste-protection = false
