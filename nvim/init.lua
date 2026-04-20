@@ -42,7 +42,7 @@ require("lazy").setup({
             "heex", "javascript", "html",
             "python", "rust", "markdown",
             "markdown_inline", "latex",  -- Add latex for math rendering
-            "typst"
+            "typst",
           },
           auto_install = true,
           highlight = { enable = true },
