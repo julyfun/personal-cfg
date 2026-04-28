@@ -71,8 +71,6 @@ inoremap <Tab> <Tab><C-g>u
 inoremap <CR> <CR><C-g>u
 
 " [move lines]
-nnoremap J :m+<CR>
-nnoremap K :m-2<CR>
 vnoremap J :m'>+<CR>gv
 vnoremap K :m'<-2<CR>gv
 

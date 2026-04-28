@@ -12,7 +12,20 @@
     "bindings": {}
   },
   {
-    "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
+    "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+    "bindings": {
+      "j": ["workspace::SendKeystrokes", "g j"],
+      "k": ["workspace::SendKeystrokes", "g k"],
+      ";": ["workspace::SendKeystrokes", "5 g j"],
+      ",": ["workspace::SendKeystrokes", "5 g k"],
+      "d": ["workspace::SendKeystrokes", "\" _ d"],
+      "D": ["workspace::SendKeystrokes", "\" _ D"],
+      "c": ["workspace::SendKeystrokes", "\" _ c"],
+      "C": ["workspace::SendKeystrokes", "\" _ C"],
+    }
+  },
+  {
+    "context": "Editor && vim_mode == visual && !VimWaiting && !menu",
     "bindings": {
       "j": ["workspace::SendKeystrokes", "g j"],
       "k": ["workspace::SendKeystrokes", "g k"],
