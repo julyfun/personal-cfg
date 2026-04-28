@@ -21,7 +21,11 @@ return {
         float = true,
         -- Sets the size of the image
         max_width = 40,
+<<<<<<< Updated upstream
         max_height = 25,
+=======
+        max_height = 20,
+>>>>>>> Stashed changes
         -- max_width = 60,
         -- max_height = 30,
         -- Apparently, all the images that you preview in neovim are converted

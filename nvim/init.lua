@@ -81,8 +81,10 @@ require("lazy").setup({
     -- [copilot]
     -- { 'github/copilot.vim' },
     -- [wakatime]
-    { 'wakatime/vim-wakatime', lazy = false }
+    { 'wakatime/vim-wakatime', lazy = false },
     -- [end]
+    -- [lint]
+    { 'mfussenegger/nvim-lint' },
   },
   -- automatically check for plugin updates
   checker = { enabled = true },
