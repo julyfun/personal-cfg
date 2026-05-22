@@ -35,17 +35,30 @@ require("lazy").setup({
       lazy = false,
       build = ":TSUpdate",
       config = function()
-        require("nvim-treesitter").setup({
-          ensure_installed = {
+        local treesitter = require("nvim-treesitter")
+        local parsers = {
+          "c", "lua", "vim",
+          "vimdoc", "query", "elixir",
+          "heex", "javascript", "html",
+          "python", "rust", "markdown",
+          "markdown_inline", "latex", -- Add latex for math rendering
+          "typst",
+        }
+
+        treesitter.setup()
+        treesitter.install(parsers)
+
+        vim.api.nvim_create_autocmd("FileType", {
+          pattern = {
             "c", "lua", "vim",
             "vimdoc", "query", "elixir",
             "heex", "javascript", "html",
             "python", "rust", "markdown",
-            "markdown_inline", "latex",  -- Add latex for math rendering
-            "typst",
+            "tex", "typst",
           },
-          auto_install = true,
-          highlight = { enable = true },
+          callback = function()
+            pcall(vim.treesitter.start)
+          end,
         })
       end
     },
