@@ -20,10 +20,8 @@ return {
         -- only used if `opts.inline` is disabled
         float = true,
         -- Sets the size of the image
-        max_width = 40,
+        max_width = 60,
         max_height = 25,
-        -- max_width = 60,
-        -- max_height = 30,
         -- Apparently, all the images that you preview in neovim are converted
         -- to .png and they're cached, original image remains the same, but
         -- the preview you see is a png converted version of that image
