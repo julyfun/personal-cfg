@@ -8,10 +8,6 @@
     },
   },
   {
-    "context": "Editor && VimControl && !VimWaiting && !menu",
-    "bindings": {}
-  },
-  {
     "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
     "bindings": {
       "j": ["workspace::SendKeystrokes", "g j"],
@@ -22,6 +18,7 @@
       "D": ["workspace::SendKeystrokes", "\" _ D"],
       "c": ["workspace::SendKeystrokes", "\" _ c"],
       "C": ["workspace::SendKeystrokes", "\" _ C"],
+      "x": ["workspace::SendKeystrokes", "\" _ x"],
     }
   },
   {
@@ -32,9 +29,9 @@
       ";": ["workspace::SendKeystrokes", "5 g j"],
       ",": ["workspace::SendKeystrokes", "5 g k"],
       "d": ["workspace::SendKeystrokes", "\" _ d"],
-      "D": ["workspace::SendKeystrokes", "\" _ D"],
       "c": ["workspace::SendKeystrokes", "\" _ c"],
-      "C": ["workspace::SendKeystrokes", "\" _ C"],
+      "<": ["workspace::SendKeystrokes", "< g v"],
+      ">": ["workspace::SendKeystrokes", "> g v"],
       "J": "editor::MoveLineDown",
       "K": "editor::MoveLineUp",
       "m m": "editor::ToggleBookmark",
@@ -42,26 +39,10 @@
     }
   },
   {
-    "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+    "context": "ProjectPanel && not_editing",
     "bindings": {
-      "x": ["workspace::SendKeystrokes", "\" _ x"]
-    }
-  },
-  {
-    "context": "Editor && vim_mode == visual && !VimWaiting && !menu",
-    "bindings": {
-      "<": ["workspace::SendKeystrokes", "< g v"],
-      ">": ["workspace::SendKeystrokes", "> g v"]
-    }
-  },
-  {
-    "context": "Editor && vim_mode == insert && !menu",
-    "bindings": {}
-  },
-  {
-    "bindings": {
-      // "cmd-]": "editor::GoToDiagnostic", // use g [
-      // "cmd-[": "editor::GoToPrevDiagnostic"
+      ";": ["workspace::SendKeystrokes", "5 g j"],
+      ",": ["workspace::SendKeystrokes", "5 g k"],
     }
   },
   {
