@@ -19,6 +19,8 @@
       "c": ["workspace::SendKeystrokes", "\" _ c"],
       "C": ["workspace::SendKeystrokes", "\" _ C"],
       "x": ["workspace::SendKeystrokes", "\" _ x"],
+      "m m": "editor::ToggleBookmark",
+      "` m": "editor::ViewBookmarks",
     }
   },
   {
@@ -32,10 +34,10 @@
       "c": ["workspace::SendKeystrokes", "\" _ c"],
       "<": ["workspace::SendKeystrokes", "< g v"],
       ">": ["workspace::SendKeystrokes", "> g v"],
+      "ctrl-a": ["workspace::SendKeystrokes", "ctrl-a g v"],
+      "ctrl-x": ["workspace::SendKeystrokes", "ctrl-x g v"],
       "J": "editor::MoveLineDown",
       "K": "editor::MoveLineUp",
-      "m m": "editor::ToggleBookmark",
-      "` m": "editor::ViewBookmarks",
     }
   },
   {
