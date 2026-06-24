@@ -65,6 +65,7 @@ REMOTE_TMP="${REMOTE_BIN}-download-$$.gz"
 
 curl -fL "$URL" -o "$LOCAL_GZ"
 ssh "$HOST" "mkdir -p $REMOTE_DIR"
-scp "$LOCAL_GZ" "$HOST:$REMOTE_TMP"
+# The same as: scp "$LOCAL_GZ" "$HOST:$REMOTE_TMP"
+cat $LOCAL_GZ | ssh $HOST "cat > $REMOTE_TMP"
 ssh "$HOST" "gunzip -f $REMOTE_TMP && chmod 755 ${REMOTE_TMP%.gz} && mv ${REMOTE_TMP%.gz} $REMOTE_BIN"
 ssh "$HOST" "$REMOTE_BIN version"
