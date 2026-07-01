@@ -1,4 +1,4 @@
-font-size = 16
+font-size = 15
 confirm-close-surface = false
 font-family = "0xProto Nerd Font"
 
@@ -8,5 +8,7 @@ keybind = shift+arrow_left=previous_tab
 keybind = shift+arrow_right=next_tab
 keybind = shift+enter=text:\x1b\r
 keybind = global:ctrl+t=toggle_quick_terminal
+
+keybind = cmd+e=text:c\n
 
 clipboard-paste-protection = false

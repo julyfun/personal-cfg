@@ -6,7 +6,7 @@ return {
             -- For Neovim 0.11+, use vim.lsp.config
             vim.lsp.config('sourcekit', {})
             vim.lsp.config('zls', {
-                cmd = { vim.fn.expand('$HOME/app/zls') },
+                cmd = { vim.fn.expand('$HOME/.local/bin/zls') },
                 filetypes = { 'zig', 'zon' },
                 root_markers = { 'build.zig', 'build.zig.zon' },
                 settings = {
