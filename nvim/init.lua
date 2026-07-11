@@ -39,10 +39,10 @@ require("lazy").setup({
         local parsers = {
           "c", "lua", "vim",
           "vimdoc", "query", "elixir",
-          "heex", "javascript", "html",
+          "heex", "javascript", "json", "html",
           "python", "rust", "markdown",
           "markdown_inline", "latex", -- Add latex for math rendering
-          "typst",
+          "typst", "zig",
         }
 
         treesitter.setup()
