@@ -137,4 +137,8 @@ vim.cmd[[colorscheme catppuccin-mocha]]
 -- hover
 vim.api.nvim_set_keymap("n", "gh", ":lua vim.diagnostic.open_float()<CR>", { noremap = true, silent = false })
 vim.api.nvim_set_keymap("n", "<F2>", ":lua vim.lsp.buf.rename()<CR>", { noremap = true, silent = false })
+vim.api.nvim_create_user_command("Cpwd", function()
+    vim.fn.setreg("+", vim.fn.expand("%:p"))
+    print("Copied path: " .. vim.fn.expand("%:p"))
+end, { desc = "Copy current file full absolute path to system clipboard" })
 
