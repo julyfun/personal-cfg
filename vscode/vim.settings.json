@@ -13,8 +13,6 @@
         { "before": ["C"], "after": ["\"", "_", "C"] },
         { "before": ["x"], "after": ["\"", "_", "x"] },
         { "before": ["g", "p"], "after": ["`", "[", "v", "`", "]"] },
-        { "before": ["J"], "after": [":", "m", "+", "<Enter>"] },
-        { "before": ["K"], "after": [":", "m", "-", "2", "<Enter>"] },
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
         { "before": ["j"], "after": ["g", "j"] },
