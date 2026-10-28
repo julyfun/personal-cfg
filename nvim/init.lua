@@ -78,7 +78,7 @@ require("lazy").setup({
     -- [typst]
     { import = "plugins.typst-preview" },
     -- [view]
-    { "nvim-treesitter/nvim-treesitter-context" },
+    -- { "nvim-treesitter/nvim-treesitter-context" },
     -- [vscode.quick-open]
     {
       'nvim-telescope/telescope.nvim', tag = '0.1.8',

@@ -63,7 +63,12 @@ REMOTE_DIR="~/.zed_server"
 REMOTE_BIN="${REMOTE_DIR}/zed-remote-server-${CHANNEL}-${TARGET_VERSION}"
 REMOTE_TMP="${REMOTE_BIN}-download-$$.gz"
 
-curl -fL "$URL" -o "$LOCAL_GZ"
+if [[ -f "$LOCAL_GZ" ]]; then
+  echo "Local cache exists, skip downloading: $LOCAL_GZ"
+else
+  curl -fL "$URL" -o "$LOCAL_GZ"
+fi
+
 ssh "$HOST" "mkdir -p $REMOTE_DIR"
 # The same as: scp "$LOCAL_GZ" "$HOST:$REMOTE_TMP"
 cat $LOCAL_GZ | ssh $HOST "cat > $REMOTE_TMP"

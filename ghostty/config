@@ -1,6 +1,6 @@
 font-size = 14
 confirm-close-surface = false
-font-family = "0xProto Nerd Font"
+font-family = "Maple Mono NF CN"
 
 keybind = cmd+opt+arrow_left=previous_tab
 keybind = cmd+opt+arrow_right=next_tab
